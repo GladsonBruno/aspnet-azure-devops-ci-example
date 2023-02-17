@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace aspnet_demo_api
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {

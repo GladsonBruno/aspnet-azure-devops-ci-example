@@ -1,0 +1,19 @@
+trigger:
+  branches:
+    include:
+      - master
+      - develop
+
+variables:
+  - group: dotnet-ci-example
+
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    name: GladsonBruno/azure-template-pipelines
+    endpoint: GladsonBruno
+    ref: 'refs/heads/main'
+
+extends:
+  template: /dotnet/azure-pipeline.yml@templates

@@ -5,8 +5,6 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
 COPY ["aspnet-demo-api/aspnet-demo-api.csproj", "aspnet-demo-api/"]
 RUN dotnet restore "aspnet-demo-api/aspnet-demo-api.csproj"
 COPY . .
@@ -18,5 +16,5 @@ RUN dotnet publish "aspnet-demo-api.csproj" -c Release -o /app/publish /p:UseApp
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY app/publish .
 ENTRYPOINT ["dotnet", "aspnet-demo-api.dll"]

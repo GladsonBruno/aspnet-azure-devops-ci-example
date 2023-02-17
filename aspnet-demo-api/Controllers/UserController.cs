@@ -10,12 +10,10 @@ namespace aspnet_demo_api.Controllers
     {
 
         private readonly IUserRepository userRepository;
-        private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserRepository userRepository, ILogger<UserController> logger)
+        public UserController(IUserRepository userRepository)
         {
             this.userRepository = userRepository;
-            _logger = logger;
         }
 
         [HttpGet()]

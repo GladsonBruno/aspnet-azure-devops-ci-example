@@ -36,7 +36,7 @@ namespace aspnet_demo_api_test.Repository
         {
             List<User> users = this.userRepository.GetAll();
 
-            Assert.Equal(10, users.Count());
+            Assert.Equal(10, users.Count);
 
         }
     }
