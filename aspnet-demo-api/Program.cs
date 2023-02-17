@@ -1,3 +1,8 @@
+using aspnet_demo_api.Controllers;
+using aspnet_demo_api.Interface;
+using aspnet_demo_api.Repository;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace aspnet_demo_api
 {
     public class Program
@@ -12,6 +17,7 @@ namespace aspnet_demo_api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             var app = builder.Build();
 
