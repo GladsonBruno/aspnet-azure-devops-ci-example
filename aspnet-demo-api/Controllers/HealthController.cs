@@ -6,11 +6,9 @@ namespace aspnet_demo_api.Controllers
     [Route("api/health")]
     public class HealthController : Controller
     {
-        private readonly ILogger<HealthController> _logger;
 
-        public HealthController(ILogger<HealthController> logger)
+        public HealthController()
         {
-            _logger = logger;
         }
 
         [HttpGet()]
