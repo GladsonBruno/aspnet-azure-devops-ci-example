@@ -13,7 +13,7 @@ resources:
     type: github
     name: GladsonBruno/azure-template-pipelines
     endpoint: GladsonBruno
-    ref: 'refs/heads/develop'
+    ref: 'refs/heads/main'
 
 extends:
   template: /dotnet/azure-pipeline.yml@templates
